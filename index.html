@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculadora</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .w-1\/5{
+            width:21.5% !important;
+        }
+        .w-36{
+            width: 46.5% !important;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container mx-auto border-2 w-2/12 my-5">
+        <div class="border-2 border-blue-300 w-full h-8 rounded">
+        </div>
+        <div>
+            <button
+            class="bg-gray-200 w-1/5 h-50 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400  focus:ring focus:ring-gray-200 focus:outline-none rounded">x²</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">(</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">)</button>
+                <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">%</button>           
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">1</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">2</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">3</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">+</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">4</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">5</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">6</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">-</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">7</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">8</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">9</button>
+                <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">x</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">.</button>
+            <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">0</button>
+                <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none">÷</button>
+                <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded">√</button>
+                <button
+                class="bg-red-200 w-36 my-1 mx-1 hover:bg-red-300 active:bg-red-500 focus:bg-red-400 focus:ring focus:ring-red-200 focus:outline-none rounded">CE</button>
+                <button
+                class="bg-violet-200 w-36 my-1 mx-1 hover:bg-violet-300 active:bg-violet-500 focus:bg-violet-400 focus:ring focus:ring-violet-200 focus:outline-none rounded">=</button>
+        </div>
+    </div>
 </body>
+
 </html>
