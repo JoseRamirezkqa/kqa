@@ -19,50 +19,53 @@
         .w-36{
             width: 45% !important;
         }
+        .w-per{
+            width: 45% !important;
+        }
     </style>
 </head>
 
 <body>
     <div class="container mx-auto border-2 w-2/12 my-5">
-        <input id="input" class="border-2 border-blue-300 w-full h-8 rounded" placeholder="0">
+        <div>
+            <input id="input" class="border-2 border-blue-300 w-full h-8 rounded" placeholder="0"><button>Historial</button>
         </input>
+        </div>
         <div>
             <button
             class="bg-gray-200 w-1/5 h-50 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400  focus:ring focus:ring-gray-200 focus:outline-none rounded" id="elevado">x²</button>
             <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="parentesisUno">(</button>
             <button
-                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="parentesisDos">)</button>
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="parentesisDos">)</button> 
                 <button
-                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="promedio">%</button>           
+                    class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="suma">+</button>
             <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="uno">1</button>
             <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="dos">2</button>
             <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="tres">3</button>
-            <button
-                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="suma">+</button>
+                <button
+                    class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="menos" >-</button>
             <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="cuatro">4</button>
             <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded"id="cinco">5</button>
             <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="seis">6</button>
-            <button
-                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="menos" >-</button>
+                <button
+                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="multiplicacion">x</button>
             <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="siete">7</button>
             <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="ocho">8</button>
             <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="nueve">9</button>
-                <button
-                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="multiplicacion">x</button>
             <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="punto">.</button>
             <button
-                class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="cero">0</button>
+                class="bg-gray-200 w-per my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none rounded" id="cero">0</button>
                 <button
                 class="bg-gray-200 w-1/5 my-1 mx-1 hover:bg-gray-300 active:bg-gray-500 focus:bg-gray-400 focus:ring focus:ring-gray-200 focus:outline-none" id="division">÷</button>
                 <button
