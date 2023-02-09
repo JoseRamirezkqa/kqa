@@ -168,10 +168,11 @@ function switchoop(op) {
 function history(){
     if (historialArray.length != 0 ){
         for( i =0; i < historialArray.length; i += 2){
-          let text = document.createTextNode(`Operación: ${historialArray[i]}; resultado: ${historialArray[i+1]}`  )
+          let text = document.createTextNode(`Operación: ${historialArray[i]}; resultado: ${historialArray[i+1]}`+"\n");
           textHistory.appendChild(text)
         }
     }else if(historialArray.length == 0){
-        alert(`Igual a cero`)
+        let text = document.createTextNode(`No hay operaciones en el historial`);
+        textHistory.appendChild(text);
     }
 }
