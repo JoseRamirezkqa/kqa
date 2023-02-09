@@ -41,6 +41,9 @@ parentesisDos.addEventListener("click", function (e) { input.value = input.value
 raiz.addEventListener("click", function (e) { input.value = "√" + input.value });
 elevado.addEventListener("click", function (e) { input.value = input.value + "²" });
 punto.addEventListener("click", function (e) { if (input.value != 0) { input.value = input.value + "." } else if (input.value == 0) { input.value = 0 + "." } });
+historial.addEventListener("click",function (e) {$('#displayNone').attr('id','displayBlock'); history();});
+let historialArray = [];
+let textHistory = document.getElementById('textHistory')
 function igualll() {
     if (input.value != input.placeholder) {
         result = input.value;
@@ -74,13 +77,12 @@ function switchoop(op) {
     switch (op) {
         case "suma":
             let numerosSUm = result.split("+")
-            console.log(numerosSUm)
             numerosSUm.forEach(numeros => {
-                console.log(numeros)
                 sumarr += parseFloat(numeros);
-                console.log(sumarr)
             });
-            input.value = sumarr
+            input.value = sumarr;
+            historialArray.push(result);
+            historialArray.push(sumarr);
             break;
         case "resta":
             let numerosRest = result.split("-");
@@ -97,6 +99,8 @@ function switchoop(op) {
                 }
             }
             input.value = rest;
+            historialArray.push(result);
+            historialArray.push(rest);
             rest = false;
             break;
         case "multiplicacion":
@@ -109,6 +113,8 @@ function switchoop(op) {
                 }
             })
             input.value = mult
+            historialArray.push(result);
+            historialArray.push(mult);
             mult = false;
             break;
         case "division":
@@ -127,6 +133,8 @@ function switchoop(op) {
                 }
             }
             input.value = div
+            historialArray.push(result);
+            historialArray.push(div);
             break
         case "raiz":
             let raiz;
@@ -139,6 +147,8 @@ function switchoop(op) {
                 }
             })
             input.value = raiz
+            historialArray.push(result);
+            historialArray.push(raiz);
             break;
         case "elevado":
             let elevado;
@@ -149,7 +159,19 @@ function switchoop(op) {
                 }
             })
             input.value = elevado
+            historialArray.push(result);
+            historialArray.push(elevado);
             break;
 
+    }
+}
+function history(){
+    if (historialArray.length != 0 ){
+        for( i =0; i < historialArray.length; i += 2){
+          let text = document.createTextNode(`Operación: ${historialArray[i]}; resultado: ${historialArray[i+1]}`  )
+          textHistory.appendChild(text)
+        }
+    }else if(historialArray.length == 0){
+        alert(`Igual a cero`)
     }
 }
