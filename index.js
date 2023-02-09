@@ -22,7 +22,6 @@ const restar = document.querySelector("#menos");
 const dividir = document.querySelector("#division");
 const multiplicar = document.querySelector("#multiplicacion");
 const igual = document.querySelector("#igual");
-
 igual.addEventListener("click", function (e) { igualll() })
 uno.addEventListener("click", function (e) { input.value = input.value + 1; input2.value = input2.value + 1 });
 dos.addEventListener("click", function (e) { input.value = input.value + 2; input2.value = input2.value + 2 });
@@ -45,6 +44,12 @@ raiz.addEventListener("click", function (e) { input.value = "√" + input.value;
 elevado.addEventListener("click", function (e) { input.value = input.value + "^"; input2.value = input2.value + "**" });
 punto.addEventListener("click", function (e) { if (input.value != 0) { input.value = input.value + "." } else if (input.value == 0) { input.value = 0 + "." } });
 historial.addEventListener("click", function (e) { $('#displayNone').attr('id', 'displayBlock'); history(); });
+document.addEventListener("keydown", (event) => {
+    let enter = event.which;
+    if (enter == 13) {
+        igualll()
+    }
+})
 let historialArray = [];
 let textHistory = document.getElementById('textHistory')
 let resultadoHistorial
@@ -53,6 +58,7 @@ bandera = false;
 function igualll() {
     if (input.value != input.placeholder) {
         result = input.value;
+        input2.value = input.value;
         result2 = input2.value;
         historialArray.push(result)
         let enunciado = result.split('');
@@ -75,6 +81,7 @@ function igualll() {
     }
 }
 result = input.value;
+console.log(result)
 function switchoop(op) {
     switch (op) {
         case "raiz":
@@ -97,7 +104,7 @@ function history() {
     if (historialArray.length != 0) {
         for (i = 0; i < historialArray.length; i += 2) {
             const histo = document.querySelector(".historial");
-            let html =`Operación: ${historialArray[i]}; resultado: ${historialArray[i + 1]} <br>`;
+            let html = `Operación: ${historialArray[i]}; resultado: ${historialArray[i + 1]} <br>`;
             histo.innerHTML += html;
 
         }
