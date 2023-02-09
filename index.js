@@ -7,6 +7,7 @@ let operacion = '';
 let resulSUma = 0;
 let sumarr = 0;
 let comprobacion = [];
+let cerrarHistorial = false;
 const cero = document.querySelector("#cero");
 const uno = document.querySelector("#uno");
 const dos = document.querySelector("#dos");
@@ -101,15 +102,24 @@ function switchoop(op) {
     }
 }
 function history() {
-    if (historialArray.length != 0) {
-        for (i = 0; i < historialArray.length; i += 2) {
-            const histo = document.querySelector(".historial");
-            let html = `Operación: ${historialArray[i]}; resultado: ${historialArray[i + 1]} <br>`;
-            histo.innerHTML += html;
+    let histo = document.querySelector(".historial");
+    if (cerrarHistorial == false) {
+        cerrarHistorial = true;
+        console.log(cerrarHistorial)
+        if (historialArray.length != 0) {
+            for (i = 0; i < historialArray.length; i += 2) {
+                let html = `Operación: ${historialArray[i]}; resultado: ${historialArray[i + 1]} <br>`;
+                histo.innerHTML += html;
 
+            }
+        } else if (historialArray.length == 0) {
+            const histo = document.querySelector(".historial");
+            let html = `No hay operaciones en el historial <br>`;
+            histo.innerHTML += html;
         }
-    } else if (historialArray.length == 0) {
-        let text = document.createTextNode(`No hay operaciones en el historial`);
-        textHistory.appendChild(text);
+    }else if(cerrarHistorial == true){
+        $('#displayBlock').attr('id','displayNone');
+        histo.innerHTML = "";
+        cerrarHistorial = false;
     }
 }
